@@ -17,21 +17,24 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
-            overflow: hidden;
+            overflow: auto; /* Allow content to scroll */
+            box-sizing: border-box;
         }
 
         .container {
-            width: 90%;
+            width: 100%; /* Make container full width */
             max-width: 1200px;
             padding: 30px;
             background-color: #112240;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
             text-align: center;
-            height: 100%;
+            height: auto;
             overflow-y: auto;
+            margin-top: 50px;
+            box-sizing: border-box;
         }
 
         .welcome-message,
@@ -73,7 +76,7 @@
             text-align: left;
             border: 1px solid #64FFDA;
             color: #E0E0E0;
-            font-size: 14px;
+            font-size: 16px; /* increased font size */
         }
 
         th {
@@ -136,9 +139,57 @@
 
         /* Footer Message Styling */
         .footer-message {
-            margin-top: 30px;
+            margin-top: 50px; /* Increased margin-top for more space at the top */
+            padding-bottom: 50px; /* Increased padding-bottom for more space at the bottom */
             font-size: 16px;
             color: #FF6B6B;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .name-title {
+                font-size: 40px;
+            }
+
+            .container {
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .links a {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            table th, table td {
+                font-size: 14px; /* Font size adjusted for mobile */
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name-title {
+                font-size: 35px;
+            }
+
+            .links a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            table th, table td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .container {
+                padding: 15px;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -221,4 +272,4 @@
     </script>
 
 </body>
- </html>
+            </html>
