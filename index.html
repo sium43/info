@@ -190,6 +190,75 @@
                 padding: 15px;
                 margin-top: 20px;
             }
+
+            /* --- Work Experience Section (Sahibul Musa Sium) --- */
+.work-experience-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0d1117;
+}
+
+.work-experience-heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #4FC3F7;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card Styling */
+.sium-job-card {
+  background: linear-gradient(135deg, #1f3b4d, #1e2a38);
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 15px;
+  color: #E0E0E0;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
+  max-width: 600px;
+  width: 100%;
+  transition: 0.4s ease-in-out;
+}
+
+.sium-job-card:hover {
+  box-shadow: 0 0 25px rgba(79, 195, 247, 0.6);
+  transform: scale(1.02);
+}
+
+.sium-job-title {
+  font-size: 24px;
+  color: #4FC3F7;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sium-company-name {
+  font-size: 18px;
+  color: #64FFDA;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sium-job-tagline {
+  font-size: 16px;
+  font-style: italic;
+  color: #BBBBBB;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .work-experience-heading {
+    font-size: 24px;
+  }
+
+  .sium-job-title {
+    font-size: 20px;
+  }
+
+  .sium-company-name,
+  .sium-job-tagline {
+    font-size: 14px;
+  }
+}
         }
     </style>
 </head>
@@ -260,6 +329,16 @@
         <div class="facebook-note">
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
+
+        <section class="work-experience-section">
+  <h2 class="work-experience-heading">💼 Work Experience</h2>
+
+  <div class="sium-job-card">
+    <h3 class="sium-job-title">🧠 Junior Marketing Executive</h3>
+    <p class="sium-company-name">📍 Beetech Communication OPC</p>
+    <p class="sium-job-tagline">🎯 Marketing | Strategy | Digital Growth</p>
+  </div>
+        </section>
 
         <!-- Footer Message -->
         <p class="footer-message">Thank you for visiting! Stay connected and take care.</p>
