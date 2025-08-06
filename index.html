@@ -7,7 +7,7 @@
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap');
-
+        
         /* General Body Style */
         body {
             font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 100vh;
+            min-height: 100vh;
             overflow: auto;
             box-sizing: border-box;
         }
@@ -34,6 +34,7 @@
             height: auto;
             overflow-y: auto;
             margin-top: 50px;
+            margin-bottom: 50px;
             box-sizing: border-box;
         }
 
@@ -102,25 +103,97 @@
             display: inline-block;
         }
 
-        /* Links Styling */
-        .links {
-            margin-top: 20px;
+        /* New Glassmorphism Social Media Links */
+        .social-container {
+            margin: 30px 0;
         }
 
-        .links a {
-            display: inline-block;
-            margin: 12px;
-            padding: 14px 30px;
-            background-color: #00B7C2;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: 0.3s;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
-        .links a:hover {
-            background-color: #00848C;
+        .social-link {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            background: rgba(17, 34, 64, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 150%;
+            background: linear-gradient(#64FFDA, #0A192F);
+            animation: rotate 4s linear infinite;
+        }
+
+        .social-link::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border-radius: 50%;
+            background: #112240;
+        }
+
+        .social-link:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(100, 255, 218, 0.3);
+        }
+
+        .social-link i {
+            font-size: 30px;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        /* Individual icon colors with gradient */
+        .youtube i { background: linear-gradient(45deg, #FF0000, #FF5A5A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .tiktok i { background: linear-gradient(45deg, #000000, #FE2C55); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .whatsapp i { background: linear-gradient(45deg, #25D366, #128C7E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .facebook i { background: linear-gradient(45deg, #3B5998, #1877F2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .social-link:hover i {
+            transform: scale(1.2);
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Tooltip for social links */
+        .social-link .tooltip {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            background: rgba(17, 34, 64, 0.9);
+            color: #64FFDA;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .social-link:hover .tooltip {
+            opacity: 1;
+            top: -45px;
         }
 
         /* Facebook Note Styling */
@@ -160,9 +233,13 @@
                 font-size: 18px;
             }
 
-            .links a {
-                padding: 12px 25px;
-                font-size: 16px;
+            .social-link {
+                width: 60px;
+                height: 60px;
+            }
+
+            .social-link i {
+                font-size: 26px;
             }
 
             table th, table td {
@@ -176,9 +253,17 @@
                 font-size: 35px;
             }
 
-            .links a {
-                padding: 10px 20px;
-                font-size: 14px;
+            .social-links {
+                gap: 15px;
+            }
+
+            .social-link {
+                width: 55px;
+                height: 55px;
+            }
+
+            .social-link i {
+                font-size: 24px;
             }
 
             table th, table td {
@@ -192,51 +277,52 @@
             }
         }
     </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <div class="container">
         <p class="welcome-message">Welcome to my official website!</p>
         <p class="name-title" id="name-title">MD. SAHIBUL MUSA SIUM</p>
 
-       <br>
+        <br>
         <!-- Contact Section -->
         <h2>Contact</h2>
         <table>
             <tr>
                 <th>Email</th>
                 <td>
-                    s4351825@gmail.com 
+                    s4351825@gmail.com
                     <a href="mailto:s4351825@gmail.com" style="margin-left: 8px; font-size: 16px; text-decoration: none;" title="Send Email">✉️</a>
                 </td>
             </tr>
             <tr>
                 <th>Phone</th>
                 <td>
-                    01567901178 
+                    01567901178
                     <a href="tel:01567901178" style="margin-left: 8px; font-size: 16px; text-decoration: none;" title="Call Now">📞</a>
                 </td>
             </tr>
-        </table> 
-        
-        <!-- Education Section -->  
-        <h2>Education</h2>  
-        <table>  
-            <tr>  
-                <th>Degree</th>  
-                <th>Status</th>  
-                <th>Institution</th>  
-            </tr>  
-            <tr>  
-                <td>Alim (HSC)</td>  
-                <td>Currently Studying</td>  
-                <td>Sharifbagh Islamia Kamil (Postgraduate) Madrasah</td>  
-            </tr>  
-            <tr>  
-                <td>Dakhil (SSC)</td>  
-                <td>Passed</td>  
-                <td>Kakran Dakhil Madrasah</td>  
-            </tr>  
+        </table>
+            
+        <!-- Education Section -->
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Status</th>
+                <th>Institution</th>
+            </tr>
+            <tr>
+                <td>Alim (HSC)</td>
+                <td>Currently Studying</td>
+                <td>Sharifbagh Islamia Kamil (Postgraduate) Madrasah</td>
+            </tr>
+            <tr>
+                <td>Dakhil (SSC)</td>
+                <td>Passed</td>
+                <td>Kakran Dakhil Madrasah</td>
+            </tr>
         </table>
 
         <!-- Address Section -->
@@ -261,15 +347,32 @@
                 <td>Beetech Communication OPC</td>
                 <td>Marketing | Strategy | Digital Growth</td>
             </tr>
+            <tr>
+                <td colspan="3" aling="centre">Together we can change the word economy</td>
+            </tr>
         </table>
 
         <!-- Social Media Links -->
         <h2>Follow My Profiles</h2>
-        <div class="links">
-            <a href="https://youtube.com/@sahibul_musa_siam?si=AII2wbwzr70n3OpS" target="_blank">YouTube</a>
-            <a href="https://vm.tiktok.com/ZSMgH4GgK/" target="_blank">TikTok</a>
-            <a href="https://wa.me/qr/OMTSS65BVH3NC1" target="_blank">WhatsApp</a>
-            <a href="https://www.facebook.com/sahibulmusasiam" target="_blank">Facebook</a>
+        <div class="social-container">
+            <div class="social-links">
+                <a href="https://youtube.com/@sahibul_musa_siam?si=AII2wbwzr70n3OpS" target="_blank" class="social-link youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span class="tooltip">YouTube</span>
+                </a>
+                <a href="https://vm.tiktok.com/ZSMgH4GgK/" target="_blank" class="social-link tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="tooltip">TikTok</span>
+                </a>
+                <a href="https://wa.me/qr/OMTSS65BVH3NC1" target="_blank" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="tooltip">WhatsApp</span>
+                </a>
+                <a href="https://www.facebook.com/sahibulmusasiam" target="_blank" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="tooltip">Facebook</span>
+                </a>
+            </div>
         </div>
 
         <!-- Facebook Note Section -->
@@ -299,6 +402,5 @@
 
         setInterval(changeNameColor, 5000);
     </script>
-
 </body>
-    </html>
+</html>
