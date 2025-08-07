@@ -218,71 +218,6 @@
             color: #FF6B6B;
         }
 
-        /* Feedback Form Styles */
-        .feedback-form {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #1C2B44;
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .feedback-form h3 {
-            color: #64FFDA;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #E0E0E0;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #64FFDA;
-            border-radius: 5px;
-            background-color: #112240;
-            color: #E0E0E0;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background-color: #64FFDA;
-            color: #0A192F;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #52d1b9;
-            transform: translateY(-2px);
-        }
-
-        /* Copyright Notice */
-        .copyright {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
-            text-align: center;
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .name-title {
@@ -413,7 +348,7 @@
                 <td>Marketing, Strategy, Digital Growth.</td>
             </tr>
             <tr>
-                <td colspan="3" style="text-align: center;">Together We Can Change The World Economy........!</td>
+                <td colspan="3" aling="centre">Together We Can Change The World Economy........!</td>
             </tr>
         </table>
 
@@ -445,35 +380,8 @@
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
 
-        <!-- Feedback Form Section -->
-        <div class="feedback-form">
-            <h3>Send Your Feedback</h3>
-            <form id="feedbackForm" action="mailto:s4351825@gmail.com" method="post" enctype="text/plain">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <div class="form-group" style="text-align: center;">
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </div>
-            </form>
-        </div>
-
         <!-- Footer Message -->
         <p class="footer-message">Thank you for visiting! Stay connected and take care.</p>
-        
-        <!-- Copyright Notice -->
-        <div class="copyright">
-            &copy; 2025 MD. SAHIBUL MUSA SIUM. All Rights Reserved.
-        </div>
     </div>
 
     <script>
@@ -493,13 +401,7 @@
         }
 
         setInterval(changeNameColor, 5000);
-
-        // Feedback form submission handler
-        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your feedback! Your message will be sent via email.');
-            this.submit();
-        });
     </script>
 </body>
 </html>
+
