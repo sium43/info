@@ -7,6 +7,7 @@
     <style>
         /* Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
         
         /* General Body Style */
         body {
@@ -43,7 +44,7 @@
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #FF6B6B;
+            color: #FFA07A; /* Changed to Light Salmon color */
         }
 
         /* Name Title */
@@ -212,11 +213,73 @@
 
         /* Footer Message Styling */
         .footer-message {
-            margin-top: 50px;
-            padding-bottom: 50px;
+            margin-top: 20px; /* Reduced margin */
+            padding-bottom: 20px;
             font-size: 16px;
-            color: #FF6B6B;
+            color: #FFA07A; /* Changed to match welcome message */
         }
+
+        /* Email Form Styling - Moved to bottom */
+        .email-form {
+            margin: 30px auto;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(26, 46, 80, 0.5);
+            border-radius: 10px;
+            border: 1px solid #64FFDA;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #64FFDA;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #64FFDA;
+            background: #112240;
+            color: #E0E0E0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #64FFDA;
+            color: #0A192F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #4ECDC4;
+            transform: translateY(-2px);
+        }
+
+   /* Handwritten copyright */
+.copyright {
+    font-family: 'Caveat', cursive;
+    font-size: 14px;
+    color: #64FFDA;
+    margin-top: 10px;
+    font-style: normal; /* এই লাইনটি যোগ করুন বা পরিবর্তন করুন */
+}
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -380,8 +443,35 @@
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
 
+        <!-- Email Form Section - Moved to bottom -->
+        <h2>Send Me a Message</h2>
+        <form class="email-form" action="https://formsubmit.co/s4351825@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+            
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
         <!-- Footer Message -->
         <p class="footer-message">Thank you for visiting! Stay connected and take care.</p>
+        
+        <!-- Copyright Notice -->
+        <p class="copyright">© 2025 Sahibul Musa Sium. All rights reserved.</p>
     </div>
 
     <script>
@@ -404,4 +494,3 @@
     </script>
 </body>
 </html>
-
