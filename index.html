@@ -219,7 +219,7 @@
             color: #FFA07A;
         }
         
-        /* Email Form Styling - Moved to bottom */
+        /* Email Form Styling */
         .email-form {
             margin: 30px auto;
             max-width: 500px;
@@ -467,7 +467,7 @@
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
         
-        <!-- Email Form Section - Updated with AJAX submission -->
+        <!-- Updated Email Form Section with AJAX -->
         <h2>Send Me a Message</h2>
         <form class="email-form" id="contactForm">
             <div class="form-group">
@@ -492,7 +492,7 @@
         <p class="footer-message">Thank you for visiting! Stay connected and take care.</p>
         
         <!-- Copyright Notice -->
-        <p class="copyright" style="color: white; font-size: 12px; font-family: 'Poppins', sans-serif; margin-top: 20px;">
+        <p class="copyright">
             © 2025 Sahibul Musa Sium. All rights reserved.
         </p>
     </div>
@@ -516,7 +516,7 @@
         
         setInterval(changeNameColor, 5000);
         
-        // Form submission with AJAX
+        // AJAX Form Submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -546,7 +546,7 @@
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Failed to send message. Please try again.');
                 }
             })
             .then(data => {
@@ -556,15 +556,21 @@
                 // Reset form
                 this.reset();
                 
-                // Refresh the page after 2 seconds
+                // Remove success message after 5 seconds
                 setTimeout(() => {
-                    window.location.reload();
+                    const alert = document.querySelector('.form-alert');
+                    if (alert) alert.remove();
                 }, 5000);
             })
             .catch(error => {
                 // Show error message
-                showAlert('Failed to send message. Please try again later.', 'error');
-                console.error('Error:', error);
+                showAlert(error.message, 'error');
+                
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    const alert = document.querySelector('.form-alert');
+                    if (alert) alert.remove();
+                }, 5000);
             })
             .finally(() => {
                 submitBtn.disabled = false;
@@ -580,14 +586,6 @@
             
             // Insert after the form
             document.querySelector('.email-form').appendChild(alertDiv);
-            
-            // Auto hide after 5 seconds
-            setTimeout(() => {
-                alertDiv.style.opacity = '0';
-                setTimeout(() => {
-                    alertDiv.remove();
-                }, 300);
-            }, 5000);
         }
     </script>
 </body>
