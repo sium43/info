@@ -23,7 +23,7 @@
             overflow: auto;
             box-sizing: border-box;
         }
-
+        
         .container {
             width: 100%;
             max-width: 1200px;
@@ -38,15 +38,15 @@
             margin-bottom: 50px;
             box-sizing: border-box;
         }
-
+        
         .welcome-message,
         .goodbye-message {
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #FFA07A; /* Changed to Light Salmon color */
+            color: #FFA07A;
         }
-
+        
         /* Name Title */
         .name-title {
             font-family: 'Roboto', sans-serif;
@@ -60,19 +60,19 @@
             display: inline-block;
             transition: all 0.6s ease-in-out;
         }
-
+        
         .name-title:hover {
             color: #FFD700;
             transform: scale(1.1);
         }
-
+        
         /* Table Styling */
         table {
             width: 100%;
             margin: 20px 0;
             border-collapse: collapse;
         }
-
+        
         th, td {
             padding: 15px;
             text-align: left;
@@ -80,20 +80,20 @@
             color: #E0E0E0;
             font-size: 16px;
         }
-
+        
         th {
             background-color: #2A3A56;
         }
-
+        
         tr:nth-child(even) {
             background-color: #1C2B44;
         }
-
+        
         tr:hover {
             background-color: #264a66;
             cursor: pointer;
         }
-
+        
         /* Section Title */
         h2 {
             color: #64FFDA;
@@ -103,19 +103,19 @@
             margin: 20px 0;
             display: inline-block;
         }
-
+        
         /* New Glassmorphism Social Media Links */
         .social-container {
             margin: 30px 0;
         }
-
+        
         .social-links {
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
         }
-
+        
         .social-link {
             width: 70px;
             height: 70px;
@@ -132,7 +132,7 @@
             background: rgba(17, 34, 64, 0.4);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
-
+        
         .social-link::before {
             content: '';
             position: absolute;
@@ -141,7 +141,7 @@
             background: linear-gradient(#64FFDA, #0A192F);
             animation: rotate 4s linear infinite;
         }
-
+        
         .social-link::after {
             content: '';
             position: absolute;
@@ -149,33 +149,33 @@
             border-radius: 50%;
             background: #112240;
         }
-
+        
         .social-link:hover {
             transform: translateY(-8px) scale(1.1);
             box-shadow: 0 15px 35px rgba(100, 255, 218, 0.3);
         }
-
+        
         .social-link i {
             font-size: 30px;
             z-index: 1;
             transition: all 0.3s ease;
         }
-
+        
         /* Individual icon colors with gradient */
         .youtube i { background: linear-gradient(45deg, #FF0000, #FF5A5A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .tiktok i { background: linear-gradient(45deg, #000000, #FE2C55); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .whatsapp i { background: linear-gradient(45deg, #25D366, #128C7E); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .facebook i { background: linear-gradient(45deg, #3B5998, #1877F2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
+        
         .social-link:hover i {
             transform: scale(1.2);
         }
-
+        
         @keyframes rotate {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
+        
         /* Tooltip for social links */
         .social-link .tooltip {
             position: absolute;
@@ -191,12 +191,12 @@
             transition: all 0.3s ease;
             z-index: 2;
         }
-
+        
         .social-link:hover .tooltip {
             opacity: 1;
             top: -45px;
         }
-
+        
         /* Facebook Note Styling */
         .facebook-note {
             display: flex;
@@ -206,19 +206,19 @@
             color: #FFFFFF;
             text-align: center;
         }
-
+        
         .facebook-note strong {
             color: #3B5998;
         }
-
+        
         /* Footer Message Styling */
         .footer-message {
-            margin-top: 20px; /* Reduced margin */
+            margin-top: 20px;
             padding-bottom: 20px;
             font-size: 16px;
-            color: #FFA07A; /* Changed to match welcome message */
+            color: #FFA07A;
         }
-
+        
         /* Email Form Styling - Moved to bottom */
         .email-form {
             margin: 30px auto;
@@ -228,18 +228,18 @@
             border-radius: 10px;
             border: 1px solid #64FFDA;
         }
-
+        
         .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
-
+        
         .form-group label {
             display: block;
             margin-bottom: 5px;
             color: #64FFDA;
         }
-
+        
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -250,12 +250,12 @@
             color: #E0E0E0;
             font-family: 'Poppins', sans-serif;
         }
-
+        
         .form-group textarea {
             min-height: 100px;
             resize: vertical;
         }
-
+        
         .submit-btn {
             background: #64FFDA;
             color: #0A192F;
@@ -266,20 +266,45 @@
             font-weight: bold;
             transition: all 0.3s ease;
         }
-
+        
         .submit-btn:hover {
             background: #4ECDC4;
             transform: translateY(-2px);
         }
 
-   /* Handwritten copyright */
-.copyright {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: #FFFFFF; /* Pure white */
-    margin-top: 20px;
-    font-style: normal;
-}
+        /* Handwritten copyright */
+        .copyright {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            color: #FFFFFF;
+            margin-top: 20px;
+            font-style: normal;
+        }
+
+        /* Form Alert Messages */
+        .form-alert {
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .form-alert.success {
+            background-color: #4CAF50;
+        }
+        
+        .form-alert.error {
+            background-color: #F44336;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -346,9 +371,8 @@
 <body>
     <div class="container">
         <p class="welcome-message">Welcome to my official website!</p>
-        <p class="name-title" id="name-title">MD. SAHIBUL MUSA SIUM</p>
-
-        <br>
+        <p class="name-title" id="name-title">MD. SAHIBUL MUSA SIUM</p> <br>
+        
         <!-- Contact Section -->
         <h2>Contact</h2>
         <table>
@@ -367,7 +391,7 @@
                 </td>
             </tr>
         </table>
-            
+        
         <!-- Education Section -->
         <h2>Education</h2>
         <table>
@@ -387,7 +411,7 @@
                 <td>Kakran Dakhil Madrasah</td>
             </tr>
         </table>
-
+        
         <!-- Address Section -->
         <h2>Address</h2>
         <table>
@@ -396,7 +420,7 @@
                 <td>Dhamrai, Dhamrai, Dhaka 1350</td>
             </tr>
         </table>
-
+        
         <!-- Work Experience Section -->
         <h2>Work Experience</h2>
         <table>
@@ -414,7 +438,7 @@
                 <td colspan="3" aling="centre">Together We Can Change The World Economy........!</td>
             </tr>
         </table>
-
+        
         <!-- Social Media Links -->
         <h2>Follow My Profiles</h2>
         <div class="social-container">
@@ -437,18 +461,15 @@
                 </a>
             </div>
         </div>
-
+        
         <!-- Facebook Note Section -->
         <div class="facebook-note">
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
-
-        <!-- Email Form Section - Moved to bottom -->
+        
+        <!-- Email Form Section - Updated with AJAX submission -->
         <h2>Send Me a Message</h2>
-        <form class="email-form" action="https://formsubmit.co/s4351825@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-            
+        <form class="email-form" id="contactForm">
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
@@ -464,21 +485,23 @@
                 <textarea id="message" name="message" required></textarea>
             </div>
             
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
         </form>
-
+        
         <!-- Footer Message -->
         <p class="footer-message">Thank you for visiting! Stay connected and take care.</p>
         
         <!-- Copyright Notice -->
         <p class="copyright" style="color: white; font-size: 12px; font-family: 'Poppins', sans-serif; margin-top: 20px;">
-    © 2025 Sahibul Musa Sium. All rights reserved.</p>
+            © 2025 Sahibul Musa Sium. All rights reserved.
+        </p>
     </div>
     
     <script>
+        // Name color changing effect
         const nameColors = ["#FF5733", "#33FF57", "#3357FF", "#FFD700", "#FF4500", "#00FFFF", "#8A2BE2", "#FF69B4", "#40E0D0", "#DC143C", "#32CD32"];
         let nameIndex = 0;
-
+        
         function changeNameColor() {
             document.getElementById("name-title").style.transition = "color 1s ease-in-out, transform 1s ease-in-out";
             document.getElementById("name-title").style.transform = "scale(1.1)";
@@ -490,8 +513,82 @@
                 document.getElementById("name-title").style.transform = "scale(1)";
             }, 1000);
         }
-
+        
         setInterval(changeNameColor, 5000);
+        
+        // Form submission with AJAX
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const originalBtnText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Remove any existing alerts
+            const existingAlert = document.querySelector('.form-alert');
+            if (existingAlert) existingAlert.remove();
+            
+            // Prepare form data
+            const formData = new FormData(this);
+            
+            // Send data to FormSubmit
+            fetch('https://formsubmit.co/ajax/s4351825@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .then(data => {
+                // Show success message
+                showAlert('Message sent successfully!', 'success');
+                
+                // Reset form
+                this.reset();
+                
+                // Refresh the page after 2 seconds
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            })
+            .catch(error => {
+                // Show error message
+                showAlert('Failed to send message. Please try again later.', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            });
+        });
+        
+        // Function to show alert messages
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `form-alert ${type}`;
+            alertDiv.textContent = message;
+            
+            // Insert after the form
+            document.querySelector('.email-form').appendChild(alertDiv);
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                alertDiv.style.opacity = '0';
+                setTimeout(() => {
+                    alertDiv.remove();
+                }, 300);
+            }, 5000);
+        }
     </script>
 </body>
 </html>
