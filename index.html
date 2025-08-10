@@ -283,7 +283,7 @@
 
         /* Form Alert Messages */
         .form-alert {
-            padding: 12px 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             margin-top: 15px;
             color: white;
@@ -291,18 +291,14 @@
             font-weight: bold;
             transition: all 0.3s ease;
             animation: slideIn 0.3s ease-out;
-            font-size: 15px;
-            line-height: 1.5;
         }
         
         .form-alert.success {
             background-color: #4CAF50;
-            border-left: 5px solid #2E7D32;
         }
         
         .form-alert.error {
             background-color: #F44336;
-            border-left: 5px solid #C62828;
         }
         
         @keyframes slideIn {
@@ -471,7 +467,7 @@
             <p>If the Facebook link is not working, you can search for <strong>Sahibul Musa Sium</strong> directly on Facebook.</p>
         </div>
         
-        <!-- Updated Email Form Section -->
+        <!-- Updated Email Form Section with AJAX -->
         <h2>Send Me a Message</h2>
         <form class="email-form" id="contactForm">
             <div class="form-group">
@@ -520,7 +516,7 @@
         
         setInterval(changeNameColor, 5000);
         
-        // Enhanced Form Submission with AJAX
+        // AJAX Form Submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -550,16 +546,12 @@
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error('Server responded with an error');
+                    throw new Error('Failed to send message. Please try again.');
                 }
             })
             .then(data => {
-                // Show enhanced success message
-                showAlert(
-                    '✓ Message sent successfully!<br>' +
-                    'Your feedback is very valuable to me. Thank you for taking the time to share your thoughts.', 
-                    'success'
-                );
+                // Show success message
+                showAlert('Message sent successfully!', 'success');
                 
                 // Reset form
                 this.reset();
@@ -571,16 +563,8 @@
                 }, 5000);
             })
             .catch(error => {
-                // Show detailed error message
-                showAlert(
-                    '⚠️ Message sending failed<br>' +
-                    'Possible reasons:<br>' +
-                    '- No internet connection<br>' +
-                    '- Server temporary unavailable<br>' +
-                    '- Network issue<br>' +
-                    'Please check your connection and try again later.', 
-                    'error'
-                );
+                // Show error message
+                showAlert(error.message, 'error');
                 
                 // Remove error message after 5 seconds
                 setTimeout(() => {
@@ -598,11 +582,11 @@
         function showAlert(message, type) {
             const alertDiv = document.createElement('div');
             alertDiv.className = `form-alert ${type}`;
-            alertDiv.innerHTML = message;
+            alertDiv.textContent = message;
             
             // Insert after the form
             document.querySelector('.email-form').appendChild(alertDiv);
         }
     </script>
-    </body>
+</body>
 </html>
